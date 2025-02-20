@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earrings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .nav{
+            background-color: #ffd2b4;
+            font-family: Georgia;
+        }
+        .but{
+            font-size: 14px;
+            margin: 4px;
+            background-color: rgb(63, 12, 12);
+            color: white;
+        }
+        .cards{
+            font-weight: 500;
+            background-color: #ffd2b4;
+            color: rgb(35, 8, 8);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .cards h5{
+            font-weight: bold;
+        }
+        .price{
+            font-size: 20px;
+            color: rgb(35, 8, 8);
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg nav">
+        <div class="container-fluid">
+          <a class="navbar-brand text-dark" href="#">My Profile</a>
+          <button class="navbar-toggler text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item ">
+                <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Cart</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Shop
+                </a>
+                <ul class="dropdown-menu text-dark">
+                  <li><a class="dropdown-item " href="#">Traditional Earrings</a></li>
+                  <li><a class="dropdown-item " href="#">Western Earrings action</a></li>
+                  <li><hr class="dropdown-divider "></li>
+                  <li><a class="dropdown-item " href="#">View All</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled text-dark" aria-disabled="true">FAQs</a>
+              </li>
+            </ul>
+            <form class="d-flex text-dark" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-dark" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- carousel -->
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="3.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="4.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- cards -->
+       <div class="d-flex flex-wrap justify-content-center">
+        <div class="card m-2" style="width: 18rem;">
+            <img src="11.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Leaf Dangle Earrings</h5>
+              <p class="card-text text-center">Elevate your style with silver leaf dangle earrings, adorned with sparkling teardrop crystals.</p>
+              <h6 class="text-dark fw-bold price">₹549</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="12.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Gem Drop Earrings</h5>
+              <p class="card-text text-center">Enhance your style with silver and blue gem drop earrings, featuring sparkling crystals and a bold blue gemstone.</p>
+              <h6 class="text-dark fw-bold price">₹459</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="13.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Flower Drops Earrings</h5>
+              <p class="card-text text-center">Enhance your look with Flower Drops earrings, featuring delicate floral accents and sparkling crystals.</p>
+              <h6 class="text-dark fw-bold price">₹699</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="14.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Teardrop Petal Studs</h5>
+              <p class="card-text text-center">Silver flower stud earrings with sparkling crystals and blue teardrop accents for timeless elegance.</p>
+              <h6 class="text-dark fw-bold price">₹949</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="15.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Silver Leaf Earrings</h5>
+              <p class="card-text text-center">Silver leaf earrings with intricate detailing, offering a touch of nature-inspired charm for any occasion.</p>
+              <h6 class="text-dark fw-bold price">₹1599</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="16.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Oxidised Round Drops</h5>
+              <p class="card-text text-center">Oxidized round earrings with luminous pearls, blending vintage elegance with modern charm.</p>
+              <h6 class="text-dark fw-bold price">₹549</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="17.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Peacock Design Studs</h5>
+              <p class="card-text text-center">Peacock stud earrings with teardrop white stones and sparkling accents, blending elegance for any occasion.</p>
+              <h6 class="text-dark fw-bold price">₹1099</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="18.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Green round Emeralds</h5>
+              <p class="card-text text-center">Green earrings with a vibrant emerald center and pearl halo, blending classic elegance with modern charm.</p>
+              <h6 class="text-dark fw-bold price">₹899</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="19.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Peacock Earrings</h5>
+              <p class="card-text text-center">Gold-plated peacock earrings with green stones, perfect for adding elegance to any special occasion.</p>
+              <h6 class="text-dark fw-bold price">₹1199</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="20.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Lakshmi Devi Earrings</h5>
+              <p class="card-text text-center">Golden Lakshmi earrings with green beads, symbolizing prosperity and elegance.</p>
+              <h6 class="text-dark fw-bold price">₹1999</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="21.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Chic Silver Earrings</h5>
+              <p class="card-text text-center">Silver crystal chain earrings with sparkling stones, blending elegance and modern charm for any occasion.</p>
+              <h6 class="text-dark fw-bold price">₹799</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+          <div class="card m-2" style="width: 18rem;">
+            <img src="22.png" class="card-img-top" alt="...">
+            <div class="card-body cards">
+              <h5 class="card-title text-center ">Triple Threat Earrings</h5>
+              <p class="card-text text-center">Gold-plated Western-inspired earrings with intricate details for a bold, rugged glamour.</p>
+              <h6 class="text-dark fw-bold price">₹999</h6>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#addToCartModal">
+                    ADD TO CART
+                </button>
+            
+                <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="addToCartLabel">Item Added to Cart!</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Your item has been successfully added to the cart! Continue shopping or proceed to checkout.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Shop</button>
+                                <button type="button" class="btn btn-primary">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <button type="button" class="btn btn-dark but" data-bs-toggle="modal" data-bs-target="#shopNowModal">
+                    SHOP NOW
+                </button>
+            
+                <div class="modal fade" id="shopNowModal" tabindex="-1" aria-labelledby="shopNowLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="shopNowLabel">Ready to Checkout?</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You're just one step away! Complete your purchase securely and enjoy your new earrings.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Purchase</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            </div>
+          </div>
+       </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
